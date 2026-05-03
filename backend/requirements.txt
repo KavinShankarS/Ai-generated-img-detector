@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+torch
+torchvision
+transformers
+Pillow
+timm
+python-multipart
+opencv-python
+numpy
+
+pip freeze > requirements.txt

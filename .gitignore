@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Model weights
+*.pth
+*.pt
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+
+# Node modules
+node_modules/
+frontend/react/node_modules/
