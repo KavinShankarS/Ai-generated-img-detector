@@ -52,3 +52,21 @@ The model is a fine-tuned ViT-Base-Patch16-224 trained on a combination of MS CO
 classification accuracy.
 
 ## Project Structure
+
+├── backend/
+│   ├── inference.py
+│   ├── main.py
+│   ├── test_heatmap.py
+│   └── requirements.txt
+├── frontend/
+│   └── react/
+│       ├── src/
+│       ├── public/
+│       └── package.json
+└── README.md
+
+
+## Note
+
+Model weights are not included in this repository due to file size. 
+Training was done on Google Colab using GPU acceleration.
