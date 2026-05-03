@@ -1,12 +1,15 @@
 # AI-Generated Image Detection System
 
-A full-stack web application that detects whether an image is AI-generated or real, using a fine-tuned Vision Transformer (ViT) model with attention heatmap visualization.
+A full-stack web application that detects whether an image is AI-generated or real, 
+using a fine-tuned Vision Transformer (ViT) model with attention heatmap visualization.
 
-## 🔍 Overview
+## Overview
 
-This system classifies images as **AI-generated or authentic** with ~94% accuracy. It provides visual explainability through attention heatmaps, helping users understand what regions of the image influenced the prediction.
+This system classifies images as AI-generated or authentic with around 94% accuracy. 
+It also provides visual explainability through attention heatmaps, showing which regions 
+of the image influenced the model's prediction.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -16,52 +19,36 @@ This system classifies images as **AI-generated or authentic** with ~94% accurac
 | Frontend | React.js, Vite |
 | Visualization | Attention Heatmaps |
 
-## ⚙️ Features
+## Features
 
-- Upload an image and get a real vs AI-generated prediction
-- Attention heatmap overlay showing model focus areas
-- `/analyze` endpoint for single image classification
-- `/compare` endpoint for side-by-side comparison
-- Dark / Light theme toggle
-- REST API based frontend–backend communication
+- Upload an image and get a prediction — real or AI-generated
+- Attention heatmap overlay to visualize model focus areas
+- REST API with `/analyze` and `/compare` endpoints
+- Dark and light theme toggle
+- Clean separation between frontend and backend
 
-## 🚀 Getting Started
+## Getting Started
 
-### Backend (FastAPI)
+### Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### Frontend (React + Vite)
+### Frontend
+
 ```bash
-cd frontend
+cd frontend/react
 npm install
 npm run dev
 ```
 
-## 📊 Model Performance
+## Model Details
 
-- **Accuracy:** ~94%
-- **Architecture:** ViT-Base-Patch16-224 (fine-tuned)
-- **Datasets:** MS COCO (real images), Defactify (AI-generated images)
+The model is a fine-tuned ViT-Base-Patch16-224 trained on a combination of MS COCO 
+(real images) and the Defactify dataset (AI-generated images), achieving around 94% 
+classification accuracy.
 
-## 📁 Project Structure
-
-├── backend/
-│   ├── inference.py
-│   ├── main.py
-│   ├── test_heatmap.py   ← optional
-│   └── requirements.txt
-├── frontend/
-│   └── react/
-│       ├── src/
-│       ├── public/
-│       ├── .gitignore
-│       └── package.json
-└── README.md
-
-## ⚠️ Note
-
-Model weights are not included in this repository due to file size. Training was done on Google Colab using GPU acceleration.
+## Project Structure
